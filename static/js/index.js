@@ -58,7 +58,7 @@ function loadTableData() {
           <td>${safeGet(row, 'Cross-Website.Op F1')}</td>
           <td>${safeGet(row, 'Cross-Website.Step SR')}</td>
 
-          <td>${safeGet(row, 'Cross-Domain['Ele.Acc']')}</td>
+          <td>${safeGet(row, 'Cross-Domain.Ele Acc')}</td>
           <td>${safeGet(row, 'Cross-Domain.Op F1')}</td>
           <td>${safeGet(row, 'Cross-Domain.Step SR')}</td>
         `;
