@@ -86,7 +86,7 @@ function loadTableData() {
 
 function setupEventListeners() {
   document.querySelector('.reset-cell').addEventListener('click', function () {
-    resetTable();
+    // resetTable();
   });
 
   // Toggle details for Cross-Task, Cross-Website, and Cross-Domain
