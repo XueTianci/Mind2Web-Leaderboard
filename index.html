@@ -189,6 +189,24 @@
           </div>
         </div>
         <!-------------------------------------------------------------------- Difficulty Levels SECTION -------------------------------------------------------------------->
+        <style>
+          .image-item {
+            display: inline-block; /* 图片和标题组合成一个内联块 */
+            width: 45%; /* 每个项目占45%宽度 */
+            text-align: center; /* 让图片和标题居中 */
+            margin: 10px 0; /* 上下间距 */
+          }
+          img {
+            width: 100%; /* 图片宽度填满容器 */
+            height: auto; /* 保持宽高比 */
+          }
+          .figure-label {
+            font-size: 14px;
+            color: #555;
+            margin-top: 5px;
+          }
+        </style>
+        
         <div class="columns is-centered m-6">
           <div class="column is-full has-text-centered content">
             <h2 class="title is-3">Different Difficulty Levels</h2>
@@ -205,14 +223,22 @@
               <p>Click legend to switch the comparison chart.</p>
             </div>
             <div class="content has-text-centered">
-              <img src="static/images/Qwen2.5-7B-Instruct_ranker50_average_test_size50.png" alt="Image 1" width="45%">
-              <p class="figure-label">Ranker: Top-50</p>
-              <img src="static/images/Qwen2.5-7B-Instruct_ranker100_average_test_size50.png" alt="Image 2" width="45%">
-              <p class="figure-label">Ranker: Top-100</p>
-              <img src="static/images/Qwen2.5-7B-Instruct_ranker150_average_test_size50.png" alt="Image 3" width="45%">
-              <p class="figure-label">Ranker: Top-150</p>
-              <img src="static/images/Qwen2.5-7B-Instruct_ranker200_average_test_size50.png" alt="Image 4" width="45%">
-              <p class="figure-label">Ranker: Top-200</p>
+              <div class="image-item">
+                <img src="static/images/Qwen2.5-7B-Instruct_ranker50_average_test_size50.png" alt="Image 1">
+                <p class="figure-label">Ranker: Top-50</p>
+              </div>
+              <div class="image-item">
+                <img src="static/images/Qwen2.5-7B-Instruct_ranker100_average_test_size50.png" alt="Image 2">
+                <p class="figure-label">Ranker: Top-100</p>
+              </div>
+              <div class="image-item">
+                <img src="static/images/Qwen2.5-7B-Instruct_ranker150_average_test_size50.png" alt="Image 3">
+                <p class="figure-label">Ranker: Top-150</p>
+              </div>
+              <div class="image-item">
+                <img src="static/images/Qwen2.5-7B-Instruct_ranker200_average_test_size50.png" alt="Image 4">
+                <p class="figure-label">Ranker: Top-200</p>
+              </div>
             </div>
           </div>
         </div>
