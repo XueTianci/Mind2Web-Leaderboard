@@ -8,18 +8,18 @@
         "type": "human_expert"
       },
       "Cross-Task": {
-        "Ele.Acc": "100",
-        "Op.F1": "100",
+        "Ele Acc": "100",
+        "Op F1": "100",
         "Step SR": "100"
       },
       "Cross-Website": {
-        "Ele.Acc": "100",
-        "Op.F1": "100",
+        "Ele Acc": "100",
+        "Op F1": "100",
         "Step SR": "100"
       },
       "Cross-Domain": {
-        "Ele.Acc": "100",
-        "Op.F1": "100",
+        "Ele Acc": "100",
+        "Op F1": "100",
         "Step SR": "100"
       }
     }
