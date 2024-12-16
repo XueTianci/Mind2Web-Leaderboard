@@ -29,7 +29,7 @@
         "name": "Flan-T5",
         "size": "-",
         "date": "2024-12-16",
-        "type": "LLM"
+        "type": "open_source"
       },
       "Cross-Task": {
         "Ele Acc": "55.1",
