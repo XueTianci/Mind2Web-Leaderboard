@@ -45,7 +45,9 @@ function loadTableData() {
         const safeGet = (obj, path, defaultValue = '-') => {
           return path.split('.').reduce((acc, part) => acc && acc[part], obj) || defaultValue;
         };
-        console.log('Cross-Task Ele.Acc:', safeGet(row, 'Cross-Task['Ele.Acc']'));
+        console.log('Cross-Task Ele.Acc:', safeGet(row, 'Cross-Task.Ele.Acc'));
+        console.log('Cross-Task Ele.Acc:', safeGet(row, 'Cross-Task.Op.F1'));
+        console.log('Cross-Task Ele.Acc:', safeGet(row, 'Cross-Task.Step.Acc'));
         tr.innerHTML = `
           <td>${nameCell}</td>
           <td>${row.info.size || '-'}</td>
