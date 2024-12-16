@@ -94,7 +94,7 @@ function setupEventListeners() {
     .forEach(header => {
       header.addEventListener('click', function () {
         const section = header.classList[0]; // Section name (Cross-Task, etc.)
-        toggleDetails(section);
+        // toggleDetails(section);
       });
     });
 
