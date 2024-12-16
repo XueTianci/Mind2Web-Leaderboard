@@ -82,39 +82,46 @@ function loadTableData() {
 
 
 function setupEventListeners() {
-  document.querySelector('.reset-cell').addEventListener('click', function() {
+  document.querySelector('.reset-cell').addEventListener('click', function () {
     resetTable();
   });
 
-  document.querySelector('.pro-details-cell').addEventListener('click', function() {
-    toggleDetails('pro');
-  });
-  document.querySelector('.val-details-cell').addEventListener('click', function() {
-    toggleDetails('val');
-  });
-  document.querySelector('.test-details-cell').addEventListener('click', function() {
-    toggleDetails('test');
-  });
+  // Toggle details for Cross-Task, Cross-Website, and Cross-Domain
+  document.querySelectorAll('.Cross-Task.clickable, .Cross-Website.clickable, .Cross-Domain.clickable')
+    .forEach(header => {
+      header.addEventListener('click', function () {
+        const section = header.classList[0]; // Section name (Cross-Task, etc.)
+        toggleDetails(section);
+      });
+    });
 
-  var headers = document.querySelectorAll('#mmmu-table thead tr:last-child th.sortable');
-  headers.forEach(function(header) {
-    header.addEventListener('click', function() {
+  // Sorting functionality for sortable headers
+  const headers = document.querySelectorAll('#mmmu-table thead tr:last-child th.sortable');
+  headers.forEach(header => {
+    header.addEventListener('click', function () {
       sortTable(this);
     });
   });
 }
 
 function toggleDetails(section) {
-  var sections = ['pro', 'val', 'test'];
-  sections.forEach(function(sec) {
-    var detailCells = document.querySelectorAll('.' + sec + '-details');
-    var overallCells = document.querySelectorAll('.' + sec + '-overall');
-    var headerCell = document.querySelector('.' + sec + '-details-cell');
-    if (sec === section) {
-      detailCells.forEach(cell => cell.classList.toggle('hidden'));
-      headerCell.setAttribute('colspan', headerCell.getAttribute('colspan') === '1' ? (sec === 'pro' ? '3' : '7') : '1');
+  // Map section names to detail classes
+  const sectionMap = {
+    'Cross-Task': 'cross-task-details',
+    'Cross-Website': 'cross-website-details',
+    'Cross-Domain': 'cross-domain-details',
+  };
+
+  Object.keys(sectionMap).forEach(key => {
+    const detailsCells = document.querySelectorAll(`.${sectionMap[key]}`);
+    const overallCells = document.querySelectorAll(`.${key.toLowerCase().replace(' ', '-')}-overall`);
+    const headerCell = document.querySelector(`.${key}.clickable`);
+
+    if (key === section) {
+      detailsCells.forEach(cell => cell.classList.toggle('hidden'));
+      headerCell.setAttribute('colspan', headerCell.getAttribute('colspan') === '3' ? '1' : '3');
     } else {
-      detailCells.forEach(cell => cell.classList.add('hidden'));
+      detailsCells.forEach(cell => cell.classList.add('hidden'));
       overallCells.forEach(cell => cell.classList.remove('hidden'));
       headerCell.setAttribute('colspan', '1');
     }
@@ -124,24 +131,23 @@ function toggleDetails(section) {
 }
 
 function resetTable() {
-  document.querySelectorAll('.pro-details, .val-details, .test-details').forEach(function(cell) {
-    cell.classList.add('hidden');
-  });
+  // Hide all details and reset overall column display
+  document.querySelectorAll('.cross-task-details, .cross-website-details, .cross-domain-details')
+    .forEach(cell => cell.classList.add('hidden'));
 
-  document.querySelectorAll('.pro-overall, .val-overall, .test-overall').forEach(function(cell) {
-    cell.classList.remove('hidden');
-  });
+  document.querySelectorAll('.cross-task-overall, .cross-website-overall, .cross-domain-overall')
+    .forEach(cell => cell.classList.remove('hidden'));
 
-  document.querySelector('.pro-details-cell').setAttribute('colspan', '1');
-  document.querySelector('.val-details-cell').setAttribute('colspan', '1');
-  document.querySelector('.test-details-cell').setAttribute('colspan', '1');
+  // Reset column spans
+  document.querySelectorAll('.Cross-Task.clickable, .Cross-Website.clickable, .Cross-Domain.clickable')
+    .forEach(header => header.setAttribute('colspan', '1'));
 
-  var valOverallHeader = document.querySelector('#mmmu-table thead tr:last-child th.val-overall');
-  sortTable(valOverallHeader, true);
+  // Sort back to default on 'Ele.Acc' column of Cross-Task
+  const defaultHeader = document.querySelector('#mmmu-table thead tr:last-child th[data-sort="number"]');
+  sortTable(defaultHeader, true);
 
   setTimeout(adjustNameColumnWidth, 0);
 }
-
 function sortTable(header, forceDescending = false, maintainOrder = false) {
   var table = document.getElementById('mmmu-table');
   var tbody = table.querySelector('tbody');
