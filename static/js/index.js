@@ -92,10 +92,10 @@ function setupEventListeners() {
   // Toggle details for Cross-Task, Cross-Website, and Cross-Domain
   document.querySelectorAll('.Cross-Task.clickable, .Cross-Website.clickable, .Cross-Domain.clickable')
     .forEach(header => {
-      header.addEventListener('click', function () {
-        const section = header.classList[0]; // Section name (Cross-Task, etc.)
+      // header.addEventListener('click', function () {
+      //   const section = header.classList[0]; // Section name (Cross-Task, etc.)
         // toggleDetails(section);
-      });
+      // });
     });
 
   // Sorting functionality for sortable headers
