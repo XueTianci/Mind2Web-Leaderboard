@@ -51,17 +51,17 @@ function loadTableData() {
           <td>${row.info.size || '-'}</td>
           <td>${row.info.date || '-'}</td>
 
-          <td>${safeGet(row, 'Cross-Task.Ele.Acc')}</td>
-          <td>${safeGet(row, 'Cross-Task.Op.F1')}</td>
-          <td>${safeGet(row, 'Cross-Task.Step SR')}</td>
+          <td>${safeGet(row, 'Cross-Task[Ele.Acc]')}</td>
+          <td>${safeGet(row, 'Cross-Task[Op.F1]')}</td>
+          <td>${safeGet(row, 'Cross-Task[Step SR]')}</td>
 
-          <td>${safeGet(row, 'Cross-Website.Ele.Acc')}</td>
-          <td>${safeGet(row, 'Cross-Website.Op.F1')}</td>
-          <td>${safeGet(row, 'Cross-Website.Step SR')}</td>
+          <td>${safeGet(row, 'Cross-Website[Ele.Acc]')}</td>
+          <td>${safeGet(row, 'Cross-Website[Op.F1]')}</td>
+          <td>${safeGet(row, 'Cross-Website[Step SR]')}</td>
 
-          <td>${safeGet(row, 'Cross-Domain.Ele.Acc')}</td>
-          <td>${safeGet(row, 'Cross-Domain.Op.F1')}</td>
-          <td>${safeGet(row, 'Cross-Domain.Step SR')}</td>
+          <td>${safeGet(row, 'Cross-Domain[Ele.Acc]')}</td>
+          <td>${safeGet(row, 'Cross-Domain[Op.F1]')}</td>
+          <td>${safeGet(row, 'Cross-Domain[Step SR]')}</td>
         `;
 
         tbody.appendChild(tr);
