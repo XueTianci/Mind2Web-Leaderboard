@@ -22,6 +22,30 @@
         "Op F1": "100",
         "Step SR": "100"
       }
+    },
+
+    {
+      "info": {
+        "name": "Flan-T5",
+        "size": "-",
+        "date": "2024-12-16",
+        "type": "LLM"
+      },
+      "Cross-Task": {
+        "Ele Acc": "55.1",
+        "Op F1": "75.7",
+        "Step SR": "52.0"
+      },
+      "Cross-Website": {
+        "Ele Acc": "42.0",
+        "Op F1": "65.2",
+        "Step SR": "38.9"
+      },
+      "Cross-Domain": {
+        "Ele Acc": "42.1",
+        "Op F1": "66.5",
+        "Step SR": "39.6"
+      }
     }
   ]
 }
