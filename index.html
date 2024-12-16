@@ -209,18 +209,11 @@
         
         <div class="columns is-centered m-6">
           <div class="column is-full has-text-centered content">
-            <h2 class="title is-3">Different Difficulty Levels</h2>
+            <h2 class="title is-3">The impact of Top-K and number of Choices</h2>
             <div class="content has-text-justified">
               <p>
-                we compares the performance of selected models across three difficulty levels.
-                GPT-4V demonstrates a significantly higher proficiency, with a success rate of 76.1%, compared to opensource models in the “Easy” category.
-                When it comes to the “Medium” category, while the gap narrows, GPT-4V still leads at 55.6%.
-                The further diminishing performance gap in the “Hard” category across models indicates that as the complexity of tasks increases, the advantage of more advanced models like GPT-4V almost disappears.
-                This might reflect a current limitation in handling expert-level challenging queries even for the most advanced models.
+                We compare the performance of different Top-K elements and varying numbers of choices using Qwen2.5-7B-Instruct as the backbone. The results show that 4 options consistently outperform other choice configurations, except for Top-100, which may be attributed to the prevalence of multiple-choice questions with 4 options in the training data. When the number of options exceeds 6, performance drops significantly. Additionally, increasing the Top-K size does not consistently improve performance and, in some cases, even degrades it. This is because larger Top-K values increase the recall rate (by approximately 5%) but also introduce more noisy candidate elements, which adversely affect overall performance.
               </p>
-            </div>
-            <div class="content has-text-centered">
-              <p>Click legend to switch the comparison chart.</p>
             </div>
             <div class="content has-text-centered">
               <div class="image-item">
