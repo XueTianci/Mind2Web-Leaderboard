@@ -43,7 +43,11 @@ function loadTableData() {
 
         // Helper to safely extract JSON properties
         const safeGet = (obj, path, defaultValue = '-') => {
-          return path.split('.').reduce((acc, part) => acc && acc[part], obj) || defaultValue;
+          try {
+            return path.split('.').reduce((acc, part) => acc && acc[part.trim()], obj) || defaultValue;
+          } catch (e) {
+            return defaultValue;
+          }
         };
         tr.innerHTML = `
           <td>${nameCell}</td>
@@ -53,7 +57,7 @@ function loadTableData() {
           <td>${safeGet(row, 'Cross-Task.Ele Acc')}</td>
           <td>${safeGet(row, 'Cross-Task.Op F1')}</td>
           <td>${safeGet(row, 'Cross-Task.Step SR')}</td>
-
+          
           <td>${safeGet(row, 'Cross-Website.Ele Acc')}</td>
           <td>${safeGet(row, 'Cross-Website.Op F1')}</td>
           <td>${safeGet(row, 'Cross-Website.Step SR')}</td>
