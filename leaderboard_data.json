@@ -74,6 +74,31 @@
 
     {
       "info": {
+        "name": "Flan-T5-xl",
+        "size": "-",
+        "date": "2024-12-17",
+        "type": "open_source"
+      },
+      "Cross-Task": {
+        "Ele Acc": "57.1",
+        "Op F1": "74.2",
+        "Step SR": "52.0"
+      },
+      "Cross-Website": {
+        "Ele Acc": "42.1",
+        "Op F1": "64.6",
+        "Step SR": "37.6"
+      },
+      "Cross-Domain": {
+        "Ele Acc": "42.2",
+        "Op F1": "66.3",
+        "Step SR": "38.7"
+      }
+    },
+
+    
+    {
+      "info": {
         "name": "Qwen2.5-7B-Instruct",
         "size": "-",
         "date": "2024-12-17",
@@ -85,9 +110,9 @@
         "Step SR": "6.5"
       },
       "Cross-Website": {
-        "Ele Acc": "",
-        "Op F1": "",
-        "Step SR": ""
+        "Ele Acc": "22.9",
+        "Op F1": "36.6",
+        "Step SR": "7.8"
       },
       "Cross-Domain": {
         "Ele Acc": "26.2",
@@ -96,6 +121,30 @@
       }
     },
 
+    {
+      "info": {
+        "name": "Llama-3.1-8B-Instruct",
+        "size": "-",
+        "date": "2024-12-17",
+        "type": "open_source"
+      },
+      "Cross-Task": {
+        "Ele Acc": "24.0",
+        "Op F1": "59.1",
+        "Step SR": "19.2"
+      },
+      "Cross-Website": {
+        "Ele Acc": "23.1",
+        "Op F1": "51.1",
+        "Step SR": "16.8"
+      },
+      "Cross-Domain": {
+        "Ele Acc": "25.1",
+        "Op F1": "56.4",
+        "Step SR": "20.0"
+      }
+    },
+    
     {
       "info": {
         "name": "gpt-4o | Qwen2.5-7B-Instruct",
