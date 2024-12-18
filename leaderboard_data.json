@@ -70,6 +70,54 @@
         "Op F1": "40.1",
         "Step SR": "8.9"
       }
+    },
+
+    {
+      "info": {
+        "name": "gpt-4o & Qwen2.5-7B-Instruct",
+        "size": "-",
+        "date": "2024-12-17",
+        "type": "open_source"
+      },
+      "Cross-Task": {
+        "Ele Acc": "17.6",
+        "Op F1": "70.8",
+        "Step SR": "14.1"
+      },
+      "Cross-Website": {
+        "Ele Acc": "18.2",
+        "Op F1": "70.9",
+        "Step SR": "14.4"
+      },
+      "Cross-Domain": {
+        "Ele Acc": "20.5",
+        "Op F1": "69.2",
+        "Step SR": "17.0"
+      }
+    },
+
+    {
+      "info": {
+        "name": "Qwen2.5-7B-Instruct & Qwen2.5-7B-Instruct",
+        "size": "-",
+        "date": "2024-12-17",
+        "type": "open_source"
+      },
+      "Cross-Task": {
+        "Ele Acc": "12.3",
+        "Op F1": "67.2",
+        "Step SR": "7.0"
+      },
+      "Cross-Website": {
+        "Ele Acc": "12.4",
+        "Op F1": "66.4",
+        "Step SR": "5.2"
+      },
+      "Cross-Domain": {
+        "Ele Acc": "13.7",
+        "Op F1": "69.2",
+        "Step SR": "8.6"
+      }
     }
   ]
 }
