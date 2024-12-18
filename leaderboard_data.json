@@ -26,25 +26,49 @@
 
     {
       "info": {
-        "name": "Flan-T5",
+        "name": "Flan-T5-Base",
         "size": "-",
-        "date": "2024-12-16",
+        "date": "2024-12-17",
         "type": "open_source"
       },
       "Cross-Task": {
-        "Ele Acc": "55.1",
-        "Op F1": "75.7",
-        "Step SR": "52.0"
+        "Ele Acc": "43.7",
+        "Op F1": "75.8",
+        "Step SR": "40.1"
       },
       "Cross-Website": {
-        "Ele Acc": "42.0",
-        "Op F1": "65.2",
-        "Step SR": "38.9"
+        "Ele Acc": "33.1",
+        "Op F1": "66.1",
+        "Step SR": "29.4"
       },
       "Cross-Domain": {
         "Ele Acc": "42.1",
         "Op F1": "66.5",
         "Step SR": "39.6"
+      }
+    },
+
+    {
+      "info": {
+        "name": "Qwen2.5-7B-Instruct",
+        "size": "-",
+        "date": "2024-12-17",
+        "type": "open_source"
+      },
+      "Cross-Task": {
+        "Ele Acc": "24.2",
+        "Op F1": "35.4",
+        "Step SR": "6.5"
+      },
+      "Cross-Website": {
+        "Ele Acc": "",
+        "Op F1": "",
+        "Step SR": ""
+      },
+      "Cross-Domain": {
+        "Ele Acc": "26.2",
+        "Op F1": "40.1",
+        "Step SR": "8.9"
       }
     }
   ]
