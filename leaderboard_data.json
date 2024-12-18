@@ -50,6 +50,30 @@
 
     {
       "info": {
+        "name": "Flan-T5-Large",
+        "size": "-",
+        "date": "2024-12-17",
+        "type": "open_source"
+      },
+      "Cross-Task": {
+        "Ele Acc": "53.6",
+        "Op F1": "75.8",
+        "Step SR": "49.3"
+      },
+      "Cross-Website": {
+        "Ele Acc": "39.0",
+        "Op F1": "66.2",
+        "Step SR": "35.7"
+      },
+      "Cross-Domain": {
+        "Ele Acc": "42.1",
+        "Op F1": "66.5",
+        "Step SR": "39.6"
+      }
+    },
+
+    {
+      "info": {
         "name": "Qwen2.5-7B-Instruct",
         "size": "-",
         "date": "2024-12-17",
