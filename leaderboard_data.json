@@ -74,7 +74,7 @@
 
     {
       "info": {
-        "name": "gpt-4o & Qwen2.5-7B-Instruct",
+        "name": "gpt-4o | Qwen2.5-7B-Instruct",
         "size": "-",
         "date": "2024-12-17",
         "type": "open_source"
@@ -98,7 +98,7 @@
 
     {
       "info": {
-        "name": "Qwen2.5-7B-Instruct & Qwen2.5-7B-Instruct",
+        "name": "Qwen2.5-7B-Instruct | Qwen2.5-7B-Instruct",
         "size": "-",
         "date": "2024-12-17",
         "type": "open_source"
