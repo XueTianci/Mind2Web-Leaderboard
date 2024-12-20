@@ -191,6 +191,30 @@
         "Op F1": "69.2",
         "Step SR": "8.6"
       }
-    }
+    },
+
+    {
+      "info": {
+        "name": "gpt-4-turbo | Qwen2-VL-7B-Instruct",
+        "size": "-",
+        "date": "2024-12-20",
+        "type": "proprietary"
+      },
+      "Cross-Task": {
+        "Ele Acc": "18.4",
+        "Op F1": "76.8",
+        "Step SR": "14.1"
+      },
+      "Cross-Website": {
+        "Ele Acc": "19.0",
+        "Op F1": "77.8",
+        "Step SR": "14.4"
+      },
+      "Cross-Domain": {
+        "Ele Acc": "20.0",
+        "Op F1": "78.2",
+        "Step SR": "16.5"
+      }
+    },
   ]
 }
