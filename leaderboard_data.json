@@ -147,7 +147,7 @@
     
     {
       "info": {
-        "name": "gpt-4o | Qwen2-VL-7B",
+        "name": "gpt-4o | Qwen2-VL-7B-Instruct",
         "size": "-",
         "date": "2024-12-17",
         "type": "proprietary"
@@ -171,7 +171,7 @@
 
     {
       "info": {
-        "name": "Qwen2-VL-7B | Qwen2-VL-7B",
+        "name": "Qwen2-VL-7B-Instruct | Qwen2-VL-7B-Instruct",
         "size": "-",
         "date": "2024-12-17",
         "type": "proprietary"
